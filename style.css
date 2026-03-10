@@ -1,0 +1,51 @@
+body{
+
+background-color: #000000; 
+
+text-align:center;
+
+font-family: "Kaisei Opti", serif !important;
+  font-weight: 400;
+  color: #ffffff !important;
+　
+
+
+}
+
+.ichigo{
+
+font-family: "Nikukyu";
+color: #dc143c;
+
+}
+
+/* 画像をスライドショーさせるよ */
+
+.slideshow-container {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0; /* 最初は透明 */
+  transform: translateX(100%); /* 右からスタート */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide.active {
+  opacity: 1; /* 表示 */
+  transform: translateX(0); /* 元の位置 */
+}
+
+.slide.fade-out {
+  opacity: 0;
+  transform: translateX(-100%); /* 左に消える */
+}
